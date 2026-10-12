@@ -14,13 +14,12 @@ You need nix with flakes turned on. Since this builds a Pi image on your laptop,
 extra-platforms = aarch64-linux
 trusted-users = root <your username>
 ```
-`trusted-users` lets nix use the binary caches in `flake.nix`. Without it, nix builds the Pi kernel from source under emulation, which takes hours.
 
 ```bash
 nix build .#nixosConfigurations.mini-drivebrain.config.system.build.sdImage --accept-flake-config
 ```
 
-Flash it. `/dev/sdX` is the whole card, not a partition:
+Flash it
 ```bash
 zstdcat result/sd-image/*.img.zst | sudo dd of=/dev/sdX bs=4M status=progress oflag=direct
 ```
