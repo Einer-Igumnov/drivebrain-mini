@@ -1,0 +1,12 @@
+name: mini-drivebrain
+
+services:
+  dev:
+    build: .
+    image: mini-drivebrain
+    volumes:
+      - ./:/app
+      - conan-cache:/root/.conan2
+
+volumes:
+  conan-cache:

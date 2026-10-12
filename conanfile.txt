@@ -1,0 +1,12 @@
+[requires]
+foxglove-websocket/1.4.0
+protobuf/5.29.3
+spdlog/1.13.0
+mcap/2.0.2
+
+[tool_requires]
+protobuf/5.29.3
+
+[generators]
+CMakeDeps
+CMakeToolchain
