@@ -32,8 +32,8 @@ docker compose run --rm dev ./build_script.sh   # -> build/mini-drivebrain
 ```
 The first build compiles the dependencies and takes a while.
 
-Once built, you'll want to connect to the Raspberry Pi's network in your WiFi menu before running the following commands:
 ## Run
+Once built, you'll want to connect to the Raspberry Pi's network in your WiFi menu before running the following commands:
 ```bash
 ssh nixos@192.168.203.67
 sudo systemctl stop <your-service-name>.service # if you try to actively overwrite a binary that's being used by a service it'll complain
